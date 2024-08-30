@@ -8,9 +8,9 @@ module asynchronous_fifo  #(parameter dw = 2,parameter aw = 4)( input wire wclk,
                                                                output wire [dw-1:0] rdata,
                                                                 output reg rempty,
                                                               output wire [aw:0] debug_w1_rgray, // Expose internal signal
-  output wire [aw:0] debug_w2_rgray, // Expose internal signal
-  output wire [aw:0] debug_r1_wgray, // Expose internal signal
-  output wire [aw:0] debug_r2_wgray  // Expose internal signal
+  output wire [aw:0] debug_w2_rgray, 
+  output wire [aw:0] debug_r1_wgray,
+  output wire [aw:0] debug_r2_wgray 
 );
 
 // Internal signals
