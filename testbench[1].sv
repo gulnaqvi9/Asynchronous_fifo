@@ -47,27 +47,27 @@ module asynchronous_fifo_tb;
    // Apply reset
  
   initial begin
-    wrst = 1'b1; // Release write reset after 15ns
-    rrst = 1'b1; // Release read reset after 70ns
+    wrst = 1'b1; // 
+    rrst = 1'b1; // 
     
     // Write stimulus
-    #10 wr = 1'b1; data_in = 2'b01; // Write data 01
-    #20 wr = 1'b0; // Stop writing
-    #30 wr = 1'b1; data_in = 2'b10; // Write data 10
-    #40 wr = 1'b0; // Stop writing
+    #10 wr = 1'b1; data_in = 2'b01; 
+    #20 wr = 1'b0; 
+    #30 wr = 1'b1; data_in = 2'b10; 
+    #40 wr = 1'b0; 
     
     // Read stimulus
-    #50 rd = 1'b1; // Start reading
-   // #20 rd = 1'b0; // Stop reading
-    
-    // Additional test cases
-   // #10 wr = 1'b1; data_in = 2'b11; // Write data 11
-    //#20 wr = 1'b0; // Stop writing
-    //#30 rd = 1'b1; // Start reading
-    //#20 rd = 1'b0; // Stop reading
+    #50 rd = 1'b1; 
+   // #20 rd = 1'b0; 
+   
+ 
+   // #10 wr = 1'b1; data_in = 2'b11; 
+    //#20 wr = 1'b0; 
+    //#30 rd = 1'b1; 
+    //#20 rd = 1'b0; 
 
     // Add more test cases as needed
-    #100ns $finish; // End simulation after 100ns
+    #100ns $finish; 
   end
 
   // Monitor the signals
